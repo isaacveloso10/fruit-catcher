@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Catcher</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="start-screen" class="container">
+        <img src="./images/fruit-catcher-logo.png"
+            alt="Fruit Catcher"
+            id="game-logo">
+        <p class="subtitle">Catch the fresh, <br>dodge the rotten!</p>
+        <button id="start-btn">Start Game</button>
+        <div class="instructions-box"><img
+            src="./images/movement-arrows.png"
+                alt="Left and right arrow keys"
+                    id="movement-arrows">
+        <p class="instructions">MOVE THE BASKET</p>
+    </div>
+    </div>
+    <div id="game-screen" class="container">
+    <div class="scoreboard">
+    <p id="score">Score: 0</p>
+    <p id="timer">02:00</p>
+    <p id="lives">Lives: 3</p>
+    </div>
+    <div id="game-box">
+      <div id="basket"><img src="./images/basket.png" alt="Fruit basket"></div>
+    </div>
+  </div>
+    <div id="game-over-screen" class="container">
+    <img
+         id="game-over-title"
+         src="./images/game-over.png"
+         alt="Game Over!"/>
+    <div class="wooden-panel">
+        <div class="scores-container">
+    <p id="final-score">Your score: 0</p>
+    <p id="best-score">Best score: 0</p></div>
+    <button id="restart-btn">Play Again</button>
+    <button id="menu-btn">Main Menu</button>
+</div></div>
+    
+    <script src="./basket.js"></script>
+    <script src="./fruits.js"></script>
+    <script src="./rotten-fruits.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
