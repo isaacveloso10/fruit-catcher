@@ -1,5 +1,5 @@
 # Fruit Catcher
-<p align="left"> <img src="file:///Users/isaac/ironhack/project-1/images/fruit-catcher-logo.png" width="350" alt="Fruit Catcher Logo"> </p>
+<p align="left"> <img src="images/fruit-catcher-logo.png" width="350" alt="Fruit Catcher Logo"> </p>
 
 
 Fruit Catcher is a game built with JavaScript as part of the Ironhack Web Development Module 1 project.
