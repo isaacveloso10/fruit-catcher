@@ -15,13 +15,13 @@ To catch the fresh fruit to score 10 points and avoid the rotten fruits. If you 
  - The final score is displayed on a final score screen.
  - The best score is saved using localStorage.
 
-<p align="left"> <img src="file:///Users/isaac/ironhack/fruit-catcher/gameplay-screen.png" width="550" alt="Fruit Catcher Gameplay Screen"> </p>
+<p align="left"> <img src="images/gameplay-screen.png" width="550" alt="Fruit Catcher Gameplay Screen"> </p>
 
 **How To Play?**
 
 Click on START GAME and move the basket horizontally using left and right arrows from the keyboard.
 
-<p align="left"> <img src="file:///Users/isaac/ironhack/fruit-catcher/main-menu-screen.png" width="550" alt="Fruit Catcher Start Screen"> </p>
+<p align="left"> <img src="images/main-menu-screen.png" width="550" alt="Fruit Catcher Start Screen"> </p>
 
 
 **Score screen - Displays:**
@@ -31,5 +31,5 @@ Click on START GAME and move the basket horizontally using left and right arrows
  - Restart button that allows the player to play again
  - A Main Menu button that allows the player to go back to the start screen
 
-<p align="left"> <img src="file:///Users/isaac/ironhack/fruit-catcher/game-over-screen.png" width="550" alt="Fruit Catcher Score Screen"> </p>
+<p align="left"> <img src="images/game-over-screen.png" width="550" alt="Fruit Catcher Score Screen"> </p>
 > Written with [StackEdit](https://stackedit.io/).
