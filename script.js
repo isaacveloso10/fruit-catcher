@@ -11,6 +11,16 @@ const finalScoreElement = document.getElementById("final-score");
 const bestScoreElement = document.getElementById("best-score");
 const timerElement = document.getElementById("timer");
 
+const collectSound = new Audio("./sounds/collect.wav");
+const rottenSound = new Audio("./sounds/rotten.wav");
+const loseLifeSound = new Audio("./sounds/lose-life.wav");
+const gameOverSound = new Audio("./sounds/game-over.wav");
+const backgroundMusic = new Audio("./sounds/background.wav");
+
+backgroundMusic.loop = true;
+backgroundMusic.volume = 0.7;
+
+
 startBtn.addEventListener("click", () => {
     startScreen.style.display = "none";
     gameScreen.style.display = "flex";
@@ -23,6 +33,9 @@ startBtn.addEventListener("click", () => {
 
         rottenFruitIntervalId = setInterval(addRottenFruit, 5000);
         timerIntervalId = setInterval(countdown, 1000);
+
+        backgroundMusic.currentTime = 0;
+        backgroundMusic.play();
 
 });
 
@@ -69,6 +82,9 @@ restartBtn.addEventListener("click", () => {
    
   fruitsArr.forEach((fruit) => {
   fruit.node.remove();
+
+  backgroundMusic.currentTime = 0;
+    backgroundMusic.play();
 });
 
 fruitsArr = [];
@@ -168,11 +184,19 @@ function checkCollisionBasketFruit() {
       fruit.node.remove();
       fruitsArr.splice(fruitsArr.indexOf(fruit), 1);
 
+      collectSound.currentTime = 0;
+        collectSound.play();
+
       score += 10;
         scoreElement.innerText = `Score: ${score}`;
+        
     }
   });
 }
+
+
+
+
 
 function checkCollisionBasketRottenFruit() {
   rottenFruitsArr.forEach((rottenFruit) => {
@@ -183,6 +207,8 @@ function checkCollisionBasketRottenFruit() {
         rottenFruitsArr.indexOf(rottenFruit),
         1
       );
+      rottenSound.currentTime = 0;
+        rottenSound.play();
 
       lives -= 1;
       livesElement.innerText = `Lives: ${lives}`;
@@ -202,6 +228,9 @@ function checkFruitDespawn() {
     if (fruit.y > gameBox.clientHeight) {
       fruit.node.remove();
       fruitsArr.splice(fruitsArr.indexOf(fruit), 1);
+
+      loseLifeSound.currentTime = 0;
+        loseLifeSound.play();
 
       lives -= 1;
       livesElement.innerText = `Lives: ${lives}`;
@@ -228,6 +257,10 @@ function gameOver() {
   gameScreen.style.display = "none";
   gameOverScreen.style.display = "flex";
 
+  backgroundMusic.pause();
+   gameOverSound.currentTime = 0;
+  gameOverSound.play();
+
   clearInterval(mainIntervalId);
   clearInterval(fruitIntervalId);
   clearInterval(rottenFruitIntervalId);
@@ -243,6 +276,5 @@ function gameOver() {
 
   clearInterval(timerIntervalId);
 }
-
 
 
