@@ -45,6 +45,14 @@ class Fruit {
     this.node.style.height = `${this.height}px`;
 
     this.speed = 2;
+
+    if (score >= 150) {
+         this.speed = 5;
+}    else if (score >= 100) {
+         this.speed = 4;
+}      else if (score >= 50) {
+          this.speed = 3;
+}
   }
   automaticMovement() {
   this.y += this.speed;
