@@ -2,10 +2,10 @@
 <p align="left"> <img src="images/fruit-catcher-logo.png" width="350" alt="Fruit Catcher Logo"> </p>
 
 
-Fruit Catcher is a game built with JavaScript as part of the Ironhack Web Development Module 1 project.
+Fruit Catcher is a 2D arcade-style browser game developed using JavaScript as part of the Module 1 project for Ironhack's Web Development Bootcamp.
 
 **The Goal** 
-To catch the fresh fruit to score 10 points and avoid the rotten fruits. If you miss a fresh fruit or catch a rotten one, you lose a life. Try to achieve the highest score possible in 2 minutes.
+Catch the fresh fruit to score 10 points and avoid the rotten fruits. If you miss a fresh fruit or catch a rotten one, you lose a life. Try to achieve the highest score possible in 2 minutes.
 
 **Game Concept**
 
